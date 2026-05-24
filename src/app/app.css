@@ -1,0 +1,112 @@
+#body {
+    @apply border border-2 ;
+    margin: 7px;
+    border: 1px solid #2A1F5C;
+    padding: 2%;
+}
+
+.whitebody {
+    background-color: white;
+    color: black;
+}
+
+.darkbody {
+    background-color: #020617;
+    color: white;
+
+}
+
+.heading {
+    display: flex;
+    gap: 20%;
+
+}
+
+.menuIcon {
+    display: none;
+    font-size: 30px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.middleheading {
+    display: flex;
+    gap: 20%;
+
+    li:hover {
+        cursor: pointer;
+        text-decoration: blue underline;
+        color: blue;
+    }
+}
+
+.endheading {
+    display: flex;
+    gap: 20%;
+}
+
+
+.intro {
+    display: flex;
+    gap: 50%;
+    margin-top: 10px;
+}
+
+.technologies {
+    margin-top: 20px;
+}
+.techList {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    flex-wrap: wrap;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.techList li {
+    border: 1px solid #2A1F5C;
+    border-radius: 15px;
+    padding: 15px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.techList li:hover {
+    transform: translateY(-5px);
+    border-color: #6D4AFF;
+}
+
+
+.about {
+    margin-top: 10px;
+    border: 1px solid black;
+}
+
+
+
+
+
+
+
+
+
+/* Mobile view */
+@media screen and (max-width: 768px) {
+
+    .middleheading {
+        display: none;
+    }
+
+    .menuIcon {
+        display: block;
+    }
+
+    .heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

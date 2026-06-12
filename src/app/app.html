@@ -12,7 +12,7 @@
   <section [class]="isDarkMode ? 'darkbody' : 'whitebody'" id="body">
 
     <!-- First View section-->
-    <section>
+    <section id="home">
 
       <!--Heading-->
       <article class="heading flex pl-5 pr-5 pt-5">
@@ -23,7 +23,7 @@
         <button class="menuIcon">
           ☰
         </button>
-        <article>
+        <!-- <article>
           <ul class="middleheading flex">
             <li>Home</li>
             <li>About</li>
@@ -33,13 +33,25 @@
             <li><button>Download CV</button></li>
             <li><button (click)="toggleTheme()">Toggle Theme</button></li>
           </ul>
+        </article> -->
+
+        <article>
+          <nav class="middleheading flex">
+            <a href="#home">Home</a>
+            <a href="#aboutme">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href=""><button>Download CV</button></a>
+            <button (click)="toggleTheme()">Toggle Theme</button>
+          </nav>
         </article>
 
       </article><br>
       <hr class="text-slate-900">
 
       <!--iNTRODUCTION-->
-      <article class="intro  p-7 mt-4 flex">
+      <article class="intro p-7 mt-4 flex">
         <section>
           <article>
             <h2>Hi,I'm</h2>
@@ -81,20 +93,25 @@
       </article>
 
       <!-- About -->
-      <article class="about mt-10 bg-slate-900 pl-7 pr-7 pt-5">
+      <article class="about mt-10 bg-slate-900 pl-7 pr-7 pt-5" id="aboutme">
         <p class="text-blue-700 text-2xl mb-4">About Me</p>
         <section class=" flex gap-4">
           <section class="flex-[2] pb-4">
             <h1 class="text-2xl">I'm Passionate about building Digital Solutions.</h1>
             <span>-</span>
-            <p>Experienced <span class="text-blue-700"> Mobile App Developer</span> at <span class="text-blue-700">Navitus Education</span>  with a strong track record in 
-              developing and deploying mobile applications. Proficient in utilizing modern frameworks, 
-              implementing responsive designs, and delivering seamless user experiences across various platforms. 
-              Executed the development of scalable front-end components using <span class="text-blue-700">Angular</span> with <span class="text-blue-700">Ionic</span> for 
-              <span class="text-blue-700">NavitusStudyGuides & NavitusSchool</span>  on <span class="text-blue-700"> Android and iOS platforms.</span>
-              Transitioning applications from <span class="text-blue-700"></span>Ionic 3 to Ionic 6 to Ionic 7 and Cordova to Capacitor , 
-              improving performance and ensuring long-term compatibility with modern platforms. Maximized application performance, 
-              executed timely updates, & optimized mobile apps to meet user needs & business objectives, 
+            <p>Experienced <span class="text-blue-700"> Mobile App Developer</span> at <span
+                class="text-blue-700">Navitus Education</span> with a strong track record in
+              developing and deploying mobile applications. Proficient in utilizing modern frameworks,
+              implementing responsive designs, and delivering seamless user experiences across various platforms.
+              Executed the development of scalable front-end components using <span class="text-blue-700">Angular</span>
+              with <span class="text-blue-700">Ionic</span> for
+              <span class="text-blue-700">NavitusStudyGuides & NavitusSchool</span> on <span class="text-blue-700">
+                Android and iOS platforms.</span>
+              Transitioning applications from <span class="text-blue-700"></span>Ionic 3 to Ionic 6 to Ionic 7 and
+              Cordova to Capacitor ,
+              improving performance and ensuring long-term compatibility with modern platforms. Maximized application
+              performance,
+              executed timely updates, & optimized mobile apps to meet user needs & business objectives,
               utilizing Xcode & Android Studio for enhanced app performance.
 
             </p>
@@ -102,17 +119,47 @@
 
           <section class="flex justify-center border-l-2 border-blue-700 flex-1">
             <ul>
-              <li><i class="bi bi-calendar4-week colored"></i> <h1><p>Date of birth</p> <p>16 May 2000</p></h1></li>
-              <li><i class="bi bi-telephone"></i> <h1><p>Phone</p> <p>8149611***</p></h1></li>
-              <li><i class="bi bi-geo-alt"></i>  <h1><p>Location</p> <p>Maharashtra</p></h1></li>
+              <li><i class="bi bi-calendar4-week colored"></i>
+                <h1>
+                  <p>Date of birth</p>
+                  <p>16 May 2000</p>
+                </h1>
+              </li>
+              <li><i class="bi bi-telephone"></i>
+                <h1>
+                  <p>Phone</p>
+                  <p>8149611***</p>
+                </h1>
+              </li>
+              <li><i class="bi bi-geo-alt"></i>
+                <h1>
+                  <p>Location</p>
+                  <p>Maharashtra</p>
+                </h1>
+              </li>
             </ul>
           </section>
 
           <section class="flex-1">
             <ul>
-              <li><i class="bi bi-envelope text-blue-700"></i> <h1><p>Email</p> <p>aishwaryaj1608@gmail.com</p></h1></li>
-              <li><i class="bi bi-briefcase"></i> <h1><p>Freelance</p> <p>Available</p></h1></li>
-              <li><i class="bi bi-globe"></i> <h1><p>Language</p> <p>English, Marathi, Hindi</p></h1></li>
+              <li><i class="bi bi-envelope text-blue-700"></i>
+                <h1>
+                  <p>Email</p>
+                  <p>aishwaryaj1608@gmail.com</p>
+                </h1>
+              </li>
+              <li><i class="bi bi-briefcase"></i>
+                <h1>
+                  <p>Freelance</p>
+                  <p>Available</p>
+                </h1>
+              </li>
+              <li><i class="bi bi-globe"></i>
+                <h1>
+                  <p>Language</p>
+                  <p>English, Marathi, Hindi</p>
+                </h1>
+              </li>
             </ul>
           </section>
 
@@ -121,7 +168,7 @@
 
 
       <!--Technologies-->
-      <article class="text-3xl  p-7 mt-4">
+      <article class="text-3xl  p-7 mt-4" id="skills">
         <section>
           <h1 class="justify-center flex text-xl">Technologies work with</h1>
           <ul class="techList mt-4">
@@ -138,7 +185,7 @@
 
 
       <!--Experience-->
-      <article class="pl-7 pr-7 mt-4 bg-slate-900 p-7">
+      <article class="pl-7 pr-7 mt-4 bg-slate-900 p-7" id="experience">
         <section class="flex gap-[15%]">
 
           <article>
@@ -164,7 +211,7 @@
 
 
     <!--Projects-->
-    <section class="ml-2 mr-2 p-7 mt-4">
+    <section class="ml-2 mr-2 p-7 mt-4" id="projects">
       <article class="flex text-blue-700 justify-between m-4 text-xl">
         <h1>PROJECTS</h1>
         <h1>View all projects <i class="bi bi-arrow-right"></i></h1>
@@ -198,9 +245,36 @@
       </article>
     </section>
 
+    <!--Get in touch-->
+    <section class="p-7 mt-4 grid grid-cols-2 bg-slate-900 mb-4">
+      <article>
+        <h1 class="text-blue-700 text-2xl">GET IN TOUCH</h1>
+        <p class="mt-2 text-xl">I'm Currently Open To New Opportunities</p>
+        <p class="mt-2 text-xl">Whether you have a question or just want to say Hi! , I'll try my best to get back to
+          you</p>
+      </article>
+
+      <article>
+        <form action="" class="">
+          <div class="flex justify-center mt-4 gap-4">
+            <input type="text" placeholder="Yout Name" class="border border-gray-400 rounded-2xl p-4 text-center">
+            <input type="text" placeholder="Your Email" class="border border-gray-400 rounded-2xl text-center">
+          </div>
+
+          <div class="flex justify-center mt-4"> 
+            <textarea name="" id="" placeholder="Your Message" class="border border-gray-400 p-4 w-[50%] text-center rounded-xl"></textarea>
+          </div>
+          
+          <div class="flex mt-4 justify-center">
+            <button class="bg-blue-700 rounded-xl p-3">Send Message <i class="bi bi-send"></i></button>
+          </div>
+        </form>
+      </article>
+    </section>
+
+
+
   </section>
-
-
 </body>
 
 </html>

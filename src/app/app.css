@@ -31,7 +31,7 @@
 .middleheading {
     gap: 20%;
 
-    li:hover {
+    a:hover {
         cursor: pointer;
         text-decoration: blue underline;
         color: blue;

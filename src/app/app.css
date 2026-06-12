@@ -65,8 +65,6 @@
     list-style: none;
     flex-wrap: wrap;
     padding: 0;
-    margin-top: 20px;
-    @apply mt-2
 }
 
 .techList li {

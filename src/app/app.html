@@ -7,120 +7,192 @@
   <title>Document</title>
 </head>
 
-<body [class]="isDarkMode ? 'darkbody' : 'whitebody'" id="body">
+<body>
 
-  <!-- First View section-->
-  <section class="firstView h-screen">
+  <section [class]="isDarkMode ? 'darkbody' : 'whitebody'" id="body">
 
-    <!--Heading-->
-    <article class="heading">
+    <!-- First View section-->
+    <section>
 
-      <article>
-        <h1>Aishwarya Jadhav</h1>
-      </article>
-      <button class="menuIcon">
-        ☰
-      </button>
-      <article>
-        <ul class="middleheading">
-          <li>Home</li>
-          <li>About</li>
-          <li>Skills</li>
-          <li>Projects</li>
-          <li>Experience</li>
-          <li><button>Download CV</button></li>
-          <li><button (click)="toggleTheme()">Toggle Theme</button></li>
-        </ul>
-      </article>
-
-
-
-    </article>
-
-    <!--iNTRODUCTION-->
-    <article class="intro pl-5 pr-5">
-      <section>
-        <article>
-          <h2>Hi,I'm</h2>
-          <h1 class="text-5xl">
-            <p>Aishwarya</p>
-            <p class="text-blue-900">Jadhav</p>
-          </h1>
-          <h2 class="text-blue-900 font-bold">Mobile App Developer(Angular & Ionic)</h2>
-          <p>Experienced Mobile App Developer with expertiee in building eficient mobile applications using Angular &
-            Ionic</p>
-        </article>
+      <!--Heading-->
+      <article class="heading">
 
         <article>
-          <button class="border border-2 p-2">Download CV</button>
-          <button class="border border-2 p-2 ml-2">Contact Me</button>
+          <h1>Aishwarya Jadhav</h1>
+        </article>
+        <button class="menuIcon">
+          ☰
+        </button>
+        <article>
+          <ul class="middleheading">
+            <li>Home</li>
+            <li>About</li>
+            <li>Skills</li>
+            <li>Experience</li>
+            <li>Projects</li>
+            <li><button>Download CV</button></li>
+            <li><button (click)="toggleTheme()">Toggle Theme</button></li>
+          </ul>
         </article>
 
-      </section>
+      </article>
+      <hr class="text-slate-900">
 
-      <section>
+      <!--iNTRODUCTION-->
+      <article class="intro">
+        <section>
+          <article>
+            <h2>Hi,I'm</h2>
+            <h1 class="text-5xl">
+              <p>Aishwarya Jadhav</p>
+            </h1>
+            <h2 class="designation">Mobile App Developer(Angular & Ionic)</h2>
+            <p class="mt-2">Experienced Mobile App Developer with expertiee in building eficient mobile applications
+              using Angular &
+              Ionic</p>
+          </article>
+
+          <article class="downloadbtn">
+            <button>Download CV
+              <i class="bi bi-download"></i>
+            </button>
+            <button>View My Work
+              <i class="bi bi-arrow-right-short"></i>
+            </button>
+          </article>
+
+          <article class="mt-2">
+            <p>Connect with me</p>
+            <ul class="flex gap-5 mt-4">
+              <li><i class="bi bi-github border rounded-full p-2 text-xl"></i></li>
+              <li><i class="bi bi-arrow-up-left-circle border rounded-full p-2 text-xl"></i></li>
+              <li><i class="bi bi-linkedin border rounded-full p-2 text-xl"></i></li>
+              <li><i class="bi bi-twitter-x border rounded-full p-2 text-xl"></i></li>
+            </ul>
+          </article>
+
+        </section>
+
+        <!-- <section>
         <article>
           Image Here
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, officiis delectus quam accusamus facere
-            earum ullam molestiae harum minima atque, ut tempore aliquam ducimus voluptatum soluta pariatur nulla alias
-            ratione.</p>
         </article>
-      </section>
-    </article>
+      </section> -->
+      </article>
 
-    <!--Technologies-->
-    <article class="technologies pl-5 pr-5">
-      <section>
-        <h1 class="justify-center flex">Technologies work with</h1>
-        <ul class="techList">
-          <li>Angular</li>
-          <li>Ionic</li>
-          <li>Typescript</li>
-          <li>Javascript</li>
-          <li>Html</li>
-          <li>CSS</li>
-          <li>Saas</li>
-          <li>REST API</li>
-        </ul>
-      </section>
-    </article>
+      <!-- About -->
+      <article class="about">
+        <p class="aboutHeading">About Me</p>
+        <section class="aboutsec">
+          <section>
+            <h1>I'm Passionate about building Digital Solutions.</h1>
+            <span>-</span>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa, quo magni illo tempora numquam commodi,
+              ipsam autem aut, quidem veniam inventore facilis perspiciatis. Velit dolor esse rerum nemo similique
+              architecto.</p>
+          </section>
+
+          <section>
+            <ul>
+              <li><i class="bi bi-calendar4-week colored"></i> <h1><p>Date of birth</p> <p>16 May 2000</p></h1></li>
+              <li><i class="bi bi-telephone"></i> <h1><p>Phone</p> <p>8149611***</p></h1></li>
+              <li><i class="bi bi-geo-alt"></i>  <h1><p>Location</p> <p>Maharashtra</p></h1></li>
+            </ul>
+          </section>
+
+          <section>
+            <ul>
+              <li><i class="bi bi-envelope text-blue-700"></i> <h1><p>Email</p> <p>aishwaryaj1608@gmail.com</p></h1></li>
+              <li><i class="bi bi-briefcase"></i> <h1><p>Freelance</p> <p>Available</p></h1></li>
+              <li><i class="bi bi-globe"></i> <h1><p>Language</p> <p>English, Marathi, Hindi</p></h1></li>
+            </ul>
+          </section>
+
+        </section>
+      </article>
 
 
-    <!--About Me-->
-    <article class="about pl-5 pr-5 ">
-      <section class="flex gap-[50%] p-5">
+      <!--Technologies-->
+      <article class="technologies">
+        <section>
+          <h1 class="justify-center flex text-xl">Technologies work with</h1>
+          <ul class="techList">
+            <li> <i class="devicon-angularjs-plain colored "></i></li>
+            <li> <i class="devicon-ionic-original colored "></i></li>
+            <li> <i class="devicon-react-plain colored "></i></li>
+            <li> <i class="devicon-mongodb-plain colored "></i></li>
+            <li> <i class="devicon-express-original colored "></i></li>
+            <li> <i class="devicon-typescript-plain colored "></i></li>
+            <li> <i class="devicon-css3-plain colored "></i></li>
+          </ul>
+        </section>
+      </article>
 
-        <article >
-          <h1 class="text-2xl">About Me</h1>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse, enim iusto ut quia amet molestiae maiores
-            magni tempora! Voluptate adipisci corporis rem, molestias quod eos magnam nisi asperiores officiis modi.</p>
+
+      <!--Experience Me-->
+      <article class="experience">
+        <section class="flex gap-[15%]">
+
+          <article>
+            <h1 class="text-2xl text-blue-700">Experience</h1>
+            <h2 class="mt-2">2022 - 2024</h2>
+            <h1 class="text-blue-700 text-2xl mt-2">Junior Mobile App Developer</h1>
+            <p class="text-xl mt-2">Developed and maintained cross-platform mobile applications for Android and iOS
+              using
+              Ionic
+              Framework and Angular. Collaborated with teams to implement new features, integrate APIs, and improve
+              application performance and usability.</p>
+
+          </article>
+
+          <article class="flex gap-20 mt-10">
+            <button><span class="expApp">navitusSchool</span></button>
+            <button><span class="expApp">navitusStudyGuides</span></button>
+          </article>
+
+        </section>
+      </article>
+    </section>
+
+
+    <!--Projects-->
+    <section class="projectSection">
+      <article class="projectHeading">
+        <h1>PROJECTS</h1>
+        <h1>View all projects <i class="bi bi-arrow-right"></i></h1>
+      </article>
+
+      <article class="projectsList">
+        <article>
+          <h1>navitusSchool</h1>
+          <p>Duration : Oct 2022 - July 2024</p>
+          <p>Technologies : Angular Ionic</p>
         </article>
 
         <article>
-          image
+          <h1>navitusStudyGuide</h1>
+          <p>Duration : Oct 2022 - July 2024</p>
+          <p>Technologies : Angular Ionic</p>
         </article>
 
-      </section>
-    </article>
+        <article>
+          <h1>smart Cafe</h1>
+          <p>Technologies : MongoDb , Express , React</p>
+          <p>Cafe project to take orders</p>
+        </article>
+
+        <article>
+          <h1>taskFlow</h1>
+          <p>Technologies : MongoDb , Express , React</p>
+          <p>Task based project to add edit delete tasks</p>
+        </article>
+
+      </article>
+    </section>
 
   </section>
 
 
-  <!-- Middle View section-->
-  <section>
-    <article>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae at nisi natus cum dolore delectus non.
-        Repellendus quam dolores amet corporis nam, iste libero eveniet? In laudantium ex modi incidunt!</p>
-    </article>
-  </section>
-
-  <!-- Last View section-->
-  <section class="h-screen">
-    <article>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae at nisi natus cum dolore delectus non.
-        Repellendus quam dolores amet corporis nam, iste libero eveniet? In laudantium ex modi incidunt!</p>
-    </article>
-  </section>
 
 </body>
 

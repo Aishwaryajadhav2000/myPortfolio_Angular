@@ -1,8 +1,9 @@
+@import "tailwindcss";
+
+
 #body {
-    @apply border border-2 ;
-    margin: 7px;
+    @apply border border-2;
     border: 1px solid #2A1F5C;
-    padding: 2%;
 }
 
 .whitebody {
@@ -19,6 +20,7 @@
 .heading {
     display: flex;
     gap: 20%;
+    @apply pl-5 pr-5 pt-5
 
 }
 
@@ -41,21 +43,52 @@
     }
 }
 
-.endheading {
-    display: flex;
-    gap: 20%;
-}
-
 
 .intro {
     display: flex;
     gap: 50%;
     margin-top: 10px;
+    @apply p-7 mt-4;
 }
 
+.designation {
+    @apply text-blue-700 font-bold mt-2;
+}
+
+.downloadbtn {
+    @apply mt-3;
+    button{
+        @apply border border-2 p-3 rounded-xl ml-2
+    }
+}
+
+/* About */
+.about{
+    @apply mt-10 bg-slate-900 pl-7 pr-7 pt-5 ;
+
+    li{
+        @apply flex gap-2 m-4
+    }
+    i{
+        @apply text-blue-700
+    }
+}
+.aboutHeading{
+    @apply text-blue-700 text-2xl mb-4
+}
+
+.aboutsec{
+    @apply grid grid-cols-3 gap-4;
+
+}
+
+
+/*Technologies*/
 .technologies {
     margin-top: 20px;
+    @apply text-3xl  p-7 mt-4;
 }
+
 .techList {
     display: flex;
     justify-content: space-between;
@@ -63,6 +96,7 @@
     flex-wrap: wrap;
     padding: 0;
     margin-top: 20px;
+    @apply mt-2
 }
 
 .techList li {
@@ -79,22 +113,40 @@
     border-color: #6D4AFF;
 }
 
+/*Experience*/
+.experience {
+    @apply pl-7 pr-7 mt-4 bg-slate-900 p-7
+}
 
-.about {
-    margin-top: 10px;
-    border: 1px solid black;
+.expApp {
+    @apply border border-blue-700 rounded-xl p-4;
+}
+
+
+/*Projects*/
+.projectSection {
+    @apply ml-2 mr-2 p-7 mt-4;
+    
+}
+
+.projectHeading {
+    @apply flex text-blue-700 justify-between m-4 text-xl;
+}
+
+.projectsList {
+    @apply flex mt-4;
+    justify-content: space-between;
+
+    article {
+        @apply p-7 rounded-2xl bg-slate-900;
+    }
 }
 
 
 
 
-
-
-
-
-
 /* Mobile view */
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
 
     .middleheading {
         display: none;
@@ -109,4 +161,4 @@
         justify-content: space-between;
         align-items: center;
     }
-}
+} */

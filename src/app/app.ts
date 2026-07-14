@@ -11,8 +11,18 @@ import { MatIconModule } from '@angular/material/icon';
 export class App {
   protected title = 'aishwaryajadhav';
   isDarkMode = true;
+  menuOpen = false;
+  viewMore = false
+
 
   toggleTheme() {
     this.isDarkMode = !this.isDarkMode;
+  }
+
+  menuIcon(){
+    this.menuOpen = !this.menuOpen
+  }
+  aboutme(){
+    this.viewMore = !this.viewMore
   }
 }

@@ -1,5 +1,4 @@
 @import "tailwindcss";
-
 .darkbody {
     background-color: #030924;
     color: white;
@@ -16,12 +15,10 @@
         @apply hover:cursor-pointer hover:text-blue-800 hover:underline ;
     }
 }
-
 .intro {
     gap: 50%;
     margin-top: 10px;
 }
-
 .downloadbtn {
     button{
         @apply border border-2 p-3 rounded-xl ml-2
@@ -35,18 +32,15 @@
         @apply text-blue-700
     }
 }
-
 .techList {
     @apply flex justify-between flex-wrap gap-1;
 }
-
 .techList li {
     @apply border rounded-2xl pl-5 pr-5 pb-3 pt-3 text-center cursor-pointer;
     border: 1px solid #2A1F5C;
     transition: 0.3s;
     margin: auto;
 }
-
 .techList li:hover {
     transform: translateY(-5px);
     border-color: #6D4AFF;
@@ -55,7 +49,5 @@
     @apply border border-blue-700 rounded-xl p-4;
 }
 .projectsList {
-    article {
         @apply p-7 rounded-2xl bg-slate-900;
-    }
 }

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <section [class]="isDarkMode ? 'darkbody' : 'whitebody'" id="body">
+
+    <!-- First View section-->
+    <section id="home">
+
+      <!--Heading-->
+      <article class="flex p-5 justify-between">
+
+        <article>
+          <h1>Aishwarya Jadhav</h1>
+        </article>
+        <button class="md:hidden flex justify-end text-2xl" (click)="menuIcon()">
+          ☰
+        </button>
+
+        <!-- DEsktop Menu -->
+        <article>
+          <nav class="desktopmenu md:flex hidden gap-20">
+            <a href="#home">Home</a>
+            <a href="#aboutme">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href=""><button>Download CV</button></a>
+            <!-- <button (click)="toggleTheme()">Toggle Theme</button> -->
+            <button *ngIf="isDarkMode" (click)="toggleTheme()"><i class="bi bi-toggle-on border rounded-full p-2 text-xl"></i></button>
+            <button *ngIf="!isDarkMode" (click)="toggleTheme()"><i class="bi bi-toggle-off border rounded-full p-2 text-xl"></i></button>
+
+          </nav>
+        </article>
+
+      </article><br>
+      <div class="md:hidden bg-[#13132d] rounded-xl p-5 text-white" *ngIf="menuOpen">
+        <ul class="flex flex-col gap-4">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#aboutme">About</a></li>
+          <li> <a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li> <a href=""><button>Download CV</button></a></li>
+          <li><button (click)="toggleTheme()">Toggle Theme</button></li>
+        </ul>
+      </div>
+      <!-- <hr class="text-slate-900"> -->
+
+      <!--iNTRODUCTION-->
+      <article class="intro p-7 flex">
+        <section>
+          <article>
+            <h2>Hi,I'm</h2>
+            <h1 class="text-3xl md:text-5xl">
+              <p>Aishwarya Jadhav</p>
+            </h1>
+            <h2 class="text-blue-700 font-bold mt-2">Mobile App Developer(Angular & Ionic)</h2>
+            <p class="mt-2">Experienced Mobile App Developer with expertiee in building eficient mobile applications
+              using Angular &
+              Ionic</p>
+          </article>
+
+          <article class="downloadbtn mt-3">
+            <button class="border border-2 p-3 rounded-xl ml-2">Download CV
+              <i class="bi bi-download"></i>
+            </button>
+            <button class="border border-2 p-3 rounded-xl ml-2">View My Work
+              <i class="bi bi-arrow-right-short"></i>
+            </button>
+          </article>
+
+          <article class="mt-2">
+            <p>Connect with me</p>
+            <ul class="flex gap-5 mt-4">
+              <li><i class="bi bi-github border rounded-full p-2 text-xl"></i></li>
+              <li><i class="bi bi-arrow-up-left-circle border rounded-full p-2 text-xl"></i></li>
+              <li><i class="bi bi-linkedin border rounded-full p-2 text-xl"></i></li>
+              <li><i class="bi bi-twitter-x border rounded-full p-2 text-xl"></i></li>
+            </ul>
+          </article>
+
+        </section>
+
+      </article>
+
+      <!--Technologies-->
+      <article class="text-3xl p-7 mt-2" id="skills">
+        <section>
+          <h1 class="justify-center flex text-xl">Technologies I work with</h1>
+          <div class="flex justify-center mt-2">
+            <hr class="text-blue-500 w-30 font-extrabold" />
+          </div>
+          <ul class="techList flex justify-between flex-wrap gap-1 mt-4">
+            <li> <i class="devicon-angularjs-plain colored "></i></li>
+            <li> <i class="devicon-ionic-original colored "></i></li>
+            <li> <i class="devicon-react-plain colored "></i></li>
+            <li> <i class="devicon-mongodb-plain colored "></i></li>
+            <li> <i class="devicon-express-original colored "></i></li>
+            <li> <i class="devicon-typescript-plain colored "></i></li>
+            <li> <i class="devicon-css3-plain colored "></i></li>
+          </ul>
+        </section>
+      </article>
+
+      <!-- About -->
+      <article class="mt-5 bg-slate-900 p-5 m-5 rounded-2xl" id="aboutme">
+        <p class="text-blue-700 text-2xl mb-4">About Me</p>
+        <section class=" flex gap-4 flex-col md:flex-row">
+          <section class="flex-[2] pb-4">
+            <h1 class="text-2xl">I'm Passionate about building Digital Solutions.</h1>
+            <span>-</span>
+            <p>Experienced <span class="text-blue-700"> Mobile App Developer</span> at <span
+                class="text-blue-700">Navitus Education</span> with a strong track record in
+              developing and deploying mobile applications. Proficient in utilizing modern frameworks,
+              implementing responsive designs, and delivering seamless user experiences across various platforms.
+            </p>
+            <p class="md:hidden text-blue-700 font-semibold text-xl" (click)="aboutme()">View more</p>
+            <p class="md:block hidden">
+              Executed the development of scalable front-end components using <span class="text-blue-700">Angular</span>
+              with <span class="text-blue-700">Ionic</span> for
+              <span class="text-blue-700">NavitusStudyGuides & NavitusSchool</span> on <span class="text-blue-700">
+                Android and iOS platforms.</span>
+              Transitioning applications from <span class="text-blue-700"></span>Ionic 3 to Ionic 6 to Ionic 7 and
+              Cordova to Capacitor ,
+              improving performance and ensuring long-term compatibility with modern platforms. Maximized application
+              performance,
+              executed timely updates, & optimized mobile apps to meet user needs & business objectives,
+              utilizing Xcode & Android Studio for enhanced app performance.
+            </p>
+            <p *ngIf="viewMore">
+              Executed the development of scalable front-end components using <span class="text-blue-700">Angular</span>
+              with <span class="text-blue-700">Ionic</span> for
+              <span class="text-blue-700">NavitusStudyGuides & NavitusSchool</span> on <span class="text-blue-700">
+                Android and iOS platforms.</span>
+              Transitioning applications from <span class="text-blue-700"></span>Ionic 3 to Ionic 6 to Ionic 7 and
+              Cordova to Capacitor ,
+              improving performance and ensuring long-term compatibility with modern platforms. Maximized application
+              performance,
+              executed timely updates, & optimized mobile apps to meet user needs & business objectives,
+              utilizing Xcode & Android Studio for enhanced app performance.
+            </p>
+          </section>
+
+          <section class="flex md:justify-center border-l-2 border-blue-700 flex-1 hidden md:flex">
+            <ul>
+              <li><i class="bi bi-calendar4-week colored"></i>
+                <h1>
+                  <p>Date of birth</p>
+                  <p>16 May 2000</p>
+                </h1>
+              </li>
+              <li><i class="bi bi-telephone"></i>
+                <h1>
+                  <p>Phone</p>
+                  <p>8149611***</p>
+                </h1>
+              </li>
+              <li><i class="bi bi-geo-alt"></i>
+                <h1>
+                  <p>Location</p>
+                  <p>Maharashtra</p>
+                </h1>
+              </li>
+            </ul>
+          </section>
+
+          <section class="flex-1 hidden md:flex">
+            <ul>
+              <li><i class="bi bi-envelope"></i>
+                <h1>
+                  <p>Email</p>
+                  <p>aishwaryaj1608@gmail.com</p>
+                </h1>
+              </li>
+              <li><i class="bi bi-briefcase"></i>
+                <h1>
+                  <p>Freelance</p>
+                  <p>Available</p>
+                </h1>
+              </li>
+              <li><i class="bi bi-globe"></i>
+                <h1>
+                  <p>Language</p>
+                  <p>English, Marathi, Hindi</p>
+                </h1>
+              </li>
+            </ul>
+          </section>
+
+          <section class="flex md:justify-center border-l-2 border-blue-700 flex-1" *ngIf="viewMore">
+            <ul>
+              <li><i class="bi bi-calendar4-week colored"></i>
+                <h1>
+                  <p>Date of birth</p>
+                  <p>16 May 2000</p>
+                </h1>
+              </li>
+              <li><i class="bi bi-telephone"></i>
+                <h1>
+                  <p>Phone</p>
+                  <p>8149611***</p>
+                </h1>
+              </li>
+              <li><i class="bi bi-geo-alt"></i>
+                <h1>
+                  <p>Location</p>
+                  <p>Maharashtra</p>
+                </h1>
+              </li>
+            </ul>
+          </section>
+
+          <section class="flex-1" *ngIf="viewMore">
+            <ul>
+              <li><i class="bi bi-envelope"></i>
+                <h1>
+                  <p>Email</p>
+                  <p>aishwaryaj1608@gmail.com</p>
+                </h1>
+              </li>
+              <li><i class="bi bi-briefcase"></i>
+                <h1>
+                  <p>Freelance</p>
+                  <p>Available</p>
+                </h1>
+              </li>
+              <li><i class="bi bi-globe"></i>
+                <h1>
+                  <p>Language</p>
+                  <p>English, Marathi, Hindi</p>
+                </h1>
+              </li>
+            </ul>
+          </section>
+
+        </section>
+      </article>
+
+
+
+      <!--Experience-->
+      <article class="pl-7 pr-7 m-5 rounded-2xl bg-slate-900 p-7" id="experience">
+        <section class="flex md:gap-[15%] flex-col md:flex-row">
+
+          <article>
+            <h1 class="text-2xl text-blue-700">Experience</h1>
+            <h2 class="mt-2">2022 - 2024</h2>
+            <h1 class="text-blue-700 text-2xl mt-2">Junior Mobile App Developer</h1>
+            <p class="text-xl mt-2">Developed and maintained cross-platform mobile applications for Android and iOS
+              using
+              Ionic
+              Framework and Angular. Collaborated with teams to implement new features, integrate APIs, and improve
+              application performance and usability.</p>
+
+          </article>
+
+          <article class="flex gap-3 md:gap-20 mt-10">
+            <button><span class="border border-blue-700 rounded-xl p-4">navitusSchool</span></button>
+            <button><span class="border border-blue-700 rounded-xl p-4">navitusStudyGuides</span></button>
+          </article>
+
+        </section>
+      </article>
+
+    </section>
+
+    <!--Education-->
+    <section class="m-2 p-7">
+      <h1 class="text-blue-700 text-xl mb-2">Education</h1>
+
+      <article class="educationArticle">
+        <ul class="md:flex md:flex-row md:gap-30">
+          <li class="text-blue-700">Master of Science in Information Technology</li>
+          <li>7.8 CGPI</li>
+          <li>University of Mumbai</li>
+          <li>2023</li>
+        </ul>
+      </article>
+
+      <article class="educationArticle">
+        <ul class="md:flex md:flex-row md:gap-30">
+          <li class="text-blue-700">Bachelor of Science in Information Technology</li>
+          <li>8 CGPI</li>
+          <li>JSSP Collage Goveli(University of mumbai)</li>
+          <li>2020</li>
+        </ul>
+      </article>
+
+      <article class="educationArticle">
+        <ul class="md:flex md:flex-row md:gap-30">
+          <li class="text-blue-700">Higher Secondary Certificate (HSC)</li>
+          <li>50%</li>
+          <li>State board of Maharashtra</li>
+          <li>2017</li>
+        </ul>
+      </article>
+    </section>
+
+    <!--Projects-->
+    <section class="ml-2 mr-2 p-7 mt-3" id="projects">
+      <article class="flex text-blue-700 justify-between m-4 text-xl">
+        <h1>PROJECTS</h1>
+        <h1 class="hidden md:block" (click)="redirectProjects()">View all projects <i class="bi bi-arrow-right"></i></h1>
+      </article>
+
+      <article class="md:justify-between gap-2 flex flex-col md:flex-row mt-4">
+
+        <article class="p-7 rounded-2xl bg-slate-900 proArticle">
+          <h1 class="text-blue-700">navitusSchool</h1>
+          <p>Duration : Oct 2022 - July 2024</p>
+          <p>Technologies : Angular Ionic</p>
+        </article>
+
+        <article class="p-7 rounded-2xl bg-slate-900 proArticle">
+          <h1 class="text-blue-700">navitusStudyGuide</h1>
+          <p>Duration : Oct 2022 - July 2024</p>
+          <p>Technologies : Angular Ionic</p>
+        </article>
+
+        <article class="p-7 rounded-2xl bg-slate-900 proArticle">
+          <h1 class="text-blue-700">smart Cafe</h1>
+          <p>Technologies : MongoDb , Express , React</p>
+          <p>Cafe project to take orders</p>
+        </article>
+
+        <article class="p-7 rounded-2xl bg-slate-900 proArticle">
+          <h1 class="text-blue-700">taskFlow</h1>
+          <p>Technologies : MongoDb , Express , React</p>
+          <p>Task based project to add edit delete tasks</p>
+        </article>
+
+      </article>
+
+      <h1 class="md:hidden" (click)="redirectProjects()">View all projects <i class="bi bi-arrow-right"></i></h1>
+
+    </section>
+
+    <!--Get in touch-->
+    <section class="p-7 m-4 rounded-2xl md:grid md:grid-cols-2 bg-slate-900 mb-4 inTouch">
+      <article>
+        <h1 class="text-blue-700 text-2xl">GET IN TOUCH</h1>
+        <p class="mt-2 text-xl">I'm Currently Open To New Opportunities</p>
+        <p class="mt-2 text-xl">Whether you have a question or just want to say Hi! , I'll try my best to get back to
+          you</p>
+      </article>
+
+      <article>
+        <form action="" class="">
+          <div class="flex justify-center mt-4 gap-0.5">
+            <input type="text" placeholder="Your Name"
+              class="border border-gray-400 rounded-2xl p-2 pl-0.5 pr-0.5 md:p-4 text-center">
+            <input type="text" placeholder="Your Email" class="border border-gray-400 rounded-2xl text-center">
+          </div>
+
+          <div class="flex justify-center mt-4">
+            <textarea name="" id="" placeholder="Your Message"
+              class="border border-gray-400 p-4 md:w-[50%] text-center rounded-xl"></textarea>
+          </div>
+
+          <div class="flex mt-4 justify-center">
+            <button class="bg-blue-700 rounded-xl p-3">Send Message <i class="bi bi-send"></i></button>
+          </div>
+        </form>
+      </article>
+    </section>
+  </section>
+</body>
+
+</html>
+

@@ -1,0 +1,41 @@
+ @import "tailwindcss";
+.darkbody {
+    background-color: #030924;
+    color: white;
+}
+.whitebody {
+   @apply bg-white text-black;
+   #aboutme , #experience, .educationArticle , .proArticle, .inTouch{
+      @apply bg-white text-black border border-slate-900;
+
+   }
+}
+.desktopmenu {
+    a{
+        @apply hover:cursor-pointer hover:text-blue-800 hover:underline ;
+    }
+}
+.intro {
+    gap: 50%;
+}
+#aboutme{
+    li{
+        @apply flex gap-2 m-4
+    }
+    i{
+        @apply text-blue-700
+    }
+}
+.techList li {
+    @apply border rounded-2xl pl-5 pr-5 pb-3 pt-3 text-center cursor-pointer;
+    border: 1px solid #2A1F5C;
+    transition: 0.3s;
+    margin: auto;
+}
+.techList li:hover {
+    transform: translateY(-5px);
+    border-color: #6D4AFF;
+}
+.educationArticle{
+    @apply bg-slate-900 p-5 rounded-2xl mb-2;
+}
